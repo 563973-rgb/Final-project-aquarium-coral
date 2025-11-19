@@ -1,66 +1,135 @@
+#SEPERATE SECTION: TALL KELP
 k = trtl.Turtle()
 k.speed(10)
-def kelp_1():
-  basex = -250
-  basey = -180
-  #stem
-  k.penup()
-  k.goto( basex , basey )
-  k.pendown()
-  k.pencolor("olive drab")
-  k.pensize(7)
-  k.right(290)
-  k.circle(200,40)
-  k.circle(-200,30)
-  #left setup
-  k.penup()
-  k.goto( basex , basey )
-  k.fillcolor("olive drab")
-  k.pensize(1)
-  k.pendown()
+def tall_kelp():
+  for i in range(2):
+    if i % 2 == 1:
+      basex = -250
+      basey = -180
+      color = "olive drab"
+    if i % 2 == 0:
+      basex = 250
+      basey = -180
+      color = "yellow green"
+    def kelp():
+      #start
+      k.penup()
+      k.goto( basex , basey )
+      k.pendown()
+      k.pencolor(color)
+      k.pensize(7)
 
-  #left side of leaves
-  heading = 75
-  forward = 25
-  for i in range(9):
-    k.penup()
-    k.setheading(heading)
-    k.forward(forward)
-    k.begin_fill()
-    k.pendown()
-    k.circle(20,100)
-    k.right(270)
-    k.circle(20,100)
-    k.end_fill()
-    if i <= 3:
-      heading = heading + 10
-    else:
-      heading = heading - 5
-      forward = 20
-  #right set up
-  k.penup()
-  k.setheading(80)
-  heading = 325 
-  #right side of leaves
-  for i in range(9):
-    if i != 0:
-      k.forward(25)
-    k.setheading(heading)
-    k.begin_fill()
-    k.pendown()
-    k.circle(20,100)
-    k.right(270)
-    k.circle(20,100)
-    k.end_fill()
-    if i < 3:
-      heading = heading + 10
-    elif i == 3:
-      heading = 348
-    else:
-      heading = heading - 10
-      forward = 20
+      #left setup
+      k.penup()
+      k.goto( basex , basey )
+      k.fillcolor(color)
+      k.pensize(1)
+      k.pendown()
+      
+      #left side of leaves
+      heading = 75
+      forward = 25
+      for i in range(9):
+        k.penup()
+        k.setheading(heading)
+        k.forward(forward)
+        k.begin_fill()
+        k.pendown()
+        k.circle(20,100)
+        k.right(270)
+        k.circle(20,100)
+        k.end_fill()
+        if i <= 3:
+          heading = heading + 10
+        else:
+          heading = heading - 5
+          forward = 20
+      #right set up
+      k.penup()
+      k.setheading(80)
+      heading = 325 
+      #right side of leaves
+      for i in range(9):
+        if i != 0:
+          k.forward(25)
+        k.setheading(heading)
+        k.begin_fill()
+        k.pendown()
+        k.circle(20,100)
+        k.right(270)
+        k.circle(20,100)
+        k.end_fill()
+        if i < 3:
+          heading = heading + 10
+        elif i == 3:
+          heading = 348
+        else:
+          heading = heading - 10
+          forward = 20
+    kelp()
+def med_kelp():
+  for i in range(2):
+    if i % 2 == 1:
+      basex = -200
+      basey = -200
+      color = "yellow green"
+    if i % 2 == 0:
+      basex = 200
+      basey = -200
+      color = "olive drab"
+    def kelp():
+      #start
+      k.penup()
+      k.goto( basex , basey )
+      k.pendown()
+      k.pencolor(color)
+      k.pensize(7)
 
+      #left setup
+      k.penup()
+      k.goto( basex , basey )
+      k.fillcolor(color)
+      k.pensize(1)
+      k.pendown()
+      
+      #left side of leaves
+      heading = 75
+      forward = 25
+      for i in range(5):
+        k.penup()
+        k.setheading(heading)
+        k.forward(forward)
+        k.begin_fill()
+        k.pendown()
+        k.circle(20,100)
+        k.right(270)
+        k.circle(20,100)
+        k.end_fill()
+        if i <= 3:
+          heading = heading + 10
+        else:
+          heading = heading - 5
+          forward = 20
+      #right set up
+      k.penup()
+      k.setheading(80)
+      heading = 350
+      #right side of leaves
+      for i in range(5):
+        if i != 0:
+          k.forward(25)
+        k.setheading(heading)
+        k.begin_fill()
+        k.pendown()
+        k.circle(20,100)
+        k.right(270)
+        k.circle(20,100)
+        k.end_fill()
+        heading = heading - 10
+        forward = 20
+    kelp()
 
-kelp_1()
+tall_kelp()
+med_kelp()
 
 wn.mainloop()
