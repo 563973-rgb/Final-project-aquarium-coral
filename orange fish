@@ -1,0 +1,18 @@
+
+
+orange_fish = "osardine3.gif"
+wn.addshape(orange_fish)
+orange = trtl.Turtle(shape=orange_fish)
+
+orange.hideturtle()
+orange.penup()
+orange.goto(-400, 0)
+orange.showturtle()
+orange.speed(1)
+orange.penup()
+for i in range(3):
+  orange.setheading(335)
+  orange.circle(150,60)
+  orange.circle(-150,60)
+
+
