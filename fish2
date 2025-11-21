@@ -1,0 +1,33 @@
+#SECTION : FISH
+blue_fish = "bluefish2.gif"
+wn.addshape(blue_fish)
+blue = trtl.Turtle(shape=blue_fish)
+orange_fish = "osardine3.gif"
+wn.addshape(orange_fish)
+orange = trtl.Turtle(shape=orange_fish)
+orange.hideturtle()
+def blue_swim():
+  blue.hideturtle()
+  blue.penup()
+  blue.goto(325, 0)
+  blue.showturtle()
+  blue.speed(1)
+  blue.penup()
+  for i in range(3):
+    blue.setheading(150)
+    blue.circle(150,60)
+    blue.circle(-150,60)
+def orange_swim():
+  orange.hideturtle()
+  orange.penup()
+  orange.goto(-400, 0)
+  orange.showturtle()
+  orange.speed(1)
+  orange.penup()
+  for i in range(3):
+    orange.setheading(335)
+    orange.circle(150,60)
+    orange.circle(-150,60)
+while 1<2:
+  blue_swim()
+  orange_swim()
