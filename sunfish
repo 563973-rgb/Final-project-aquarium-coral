@@ -1,0 +1,21 @@
+#sunfish code
+
+# import fish
+sun_fish = "ezgif-85e4d01addd91b7b.gif"
+wn.addshape(sun_fish)
+sun = trtl.Turtle(shape=sun_fish)
+
+# setup, move fish off-screen
+sun.penup()
+sun.goto(400, 0)
+sun.showturtle()
+sun.speed(1)
+sun.penup()
+
+# code for fish swimming
+for i in range(5):
+  sun.setheading(160)
+  sun.circle(130,50)
+  sun.circle(-130,55)
+  
+wn.mainloop()
