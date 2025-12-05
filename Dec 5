@@ -759,7 +759,7 @@ def fish():
   
   # setup, move fish off-screen
   sun.penup()
-  sun.goto(325, 0)
+  sun.goto(340, 0)
   sun.showturtle()
   sun.speed(1)
   sun.penup()
