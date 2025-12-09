@@ -1,0 +1,21 @@
+# teal three color coral
+def three_coral():
+
+  colors = ["teal" , "mediumaquamarine", "lightseagreen"]
+  
+  for color in colors:
+    trtl.penup()
+    trtl.goto(-165,-3)
+    trtl.pencolor(color)
+    trtl.pensize(2)
+    trtl.pendown()
+    trtl.begin_fill()
+    for i in range(4):
+      trtl.left(2)
+      trtl.begin_fill()
+      trtl.circle(-30,-40)
+      trtl.goto(-165,-3)
+    trtl.penup()
+    trtl.goto(0,0)
+
+three_coral()
